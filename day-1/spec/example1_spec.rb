@@ -11,5 +11,12 @@ RSpec.describe Example1 do
 
             expect(result).to eq ''
         end
+        
+        it 'returns k when input b' do
+            transformer = Example1.new
+            result = transformer.transform('b')
+
+            expect(result).to eq 'k'
+        end
     end
 end
