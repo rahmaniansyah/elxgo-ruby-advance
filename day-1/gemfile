@@ -7,3 +7,5 @@ gem 'sinatra'
 
 # Unit test gem for ruby
 gem 'rspec'
+
+gem 'simplecov'
