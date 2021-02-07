@@ -14,18 +14,11 @@ RSpec.describe Exercise do
             expect(result).to eq [1]
         end
 
-        # it 'returns 55 when input is [5,4]' do
-        #     incrementer = Exercise.new
-        #     result = incrementer.incrementing_aoi([5,4])
+        it 'returns [6] when input is [5]' do
+            incrementer = Exercise.new
+            result = incrementer.incrementing_aoi([5])
 
-        #     expect(result).to eq 55
-        # end
-
-        # it 'returns [5,5] when input is [55]' do
-        #     incrementer = Exercise.new
-        #     result = incrementer.convert_increment(55)
-
-        #     expect(result).to eq 55
-        # end
+            expect(result).to eq [6]
+        end
     end
 end
