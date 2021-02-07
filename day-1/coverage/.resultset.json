@@ -1,7 +1,38 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/mekari/Belajar/elxgo-ruby-advance/day-1/models/exercise.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          1,
+          null,
+          3,
+          3,
+          3,
+          6,
+          6,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          3,
+          7,
+          7,
+          null,
+          3,
+          null,
+          null
+        ]
+      }
     },
-    "timestamp": 1612680528
+    "timestamp": 1612680726
   }
 }

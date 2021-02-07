@@ -1,7 +1,8 @@
 
-require './models/exercise.rb'
 require 'simplecov'
 SimpleCov.start
+
+require './models/exercise.rb'
 
 # terdapat input array of integer
 # breakdown array menjadi 1 variable
