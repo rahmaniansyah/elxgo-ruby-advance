@@ -7,11 +7,11 @@ require './models/exercise.rb'
 
 RSpec.describe Exercise do
     context '#incrementing_aoi' do
-        it 'returns false when input not integer' do
+        it 'returns true when input []' do
             incrementer = Exercise.new
-            result = incrementer.incrementing_aoi('a')
+            result = incrementer.incrementing_aoi([])
 
-            expect(result).to eq false
+            expect(result).to eq true
         end
 
         # it 'returns 54 when input is [5,4]' do
