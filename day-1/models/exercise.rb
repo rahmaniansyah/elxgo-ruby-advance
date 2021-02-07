@@ -13,6 +13,6 @@ class Exercise
             end
         end
 
-        result
+        result + 1
     end
 end
