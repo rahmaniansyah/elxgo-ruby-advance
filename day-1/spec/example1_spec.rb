@@ -32,5 +32,12 @@ RSpec.describe Example1 do
 
             expect(result).to eq 'i'
         end
+
+        it 'returns z when input e' do
+            transformer = Example1.new
+            result = transformer.transform('e')
+
+            expect(result).to eq 'z'
+        end
     end
 end
