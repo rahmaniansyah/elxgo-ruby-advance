@@ -7,11 +7,12 @@ class Example1
         elsif VOWEL.include?(input)
             return (input.ord - 5).chr
         else
-            if input.ord + 9 > 'z'.ord
-                diff = input.ord + 9 - 'z'.ord
+            ordinal_res = input.ord + 9
+            if ordinal_res + 9 > 'z'.ord
+                diff = ordinal_res - 'z'.ord
                 ('a'.ord + diff - 1).chr
             else
-                (input.ord + 9).chr
+                ordinal_res.chr
             end
         end
     end
