@@ -18,5 +18,19 @@ RSpec.describe Example1 do
 
             expect(result).to eq 'k'
         end
+
+        it 'returns p when input u' do
+            transformer = Example1.new
+            result = transformer.transform('u')
+
+            expect(result).to eq 'p'
+        end
+
+        it 'returns i when input z' do
+            transformer = Example1.new
+            result = transformer.transform('z')
+
+            expect(result).to eq 'i'
+        end
     end
 end
