@@ -14,14 +14,20 @@ class Example1
                 ordinal_res.chr
             end
         else
-            ordinal_res = input.ord + 9
+            transform_consonant(input)
+        end
+    end
+
+    private
+
+    def transform_consonant(input)
+        ordinal_res = input.ord + 9
             
-            if ordinal_res > 'z'.ord
-                diff = ordinal_res - 'z'.ord
-                ('a'.ord + diff - 1).chr
-            else
-                ordinal_res.chr
-            end
+        if ordinal_res > 'z'.ord
+            diff = ordinal_res - 'z'.ord
+            ('a'.ord + diff - 1).chr
+        else
+            ordinal_res.chr
         end
     end
 end
