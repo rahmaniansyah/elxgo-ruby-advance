@@ -2,13 +2,17 @@ class Example1
     VOWEL = ['a','i','u','e','o']
 
     def transform(input)
-        if input == ''
-            ''
-        elsif VOWEL.include?(input)
-            transform_vowel(input)
-        else
-            transform_consonant(input)
+        result = ''
+        input.each_char do |character|
+            if character == ''
+                result << ''
+            elsif VOWEL.include?(character)
+                result << transform_vowel(character)
+            else
+                result << transform_consonant(character)
+            end
         end
+        result
     end
 
     private

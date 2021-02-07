@@ -39,5 +39,12 @@ RSpec.describe Example1 do
 
             expect(result).to eq 'z'
         end
+
+        it 'returns qjvzfjat when input homework' do
+            transformer = Example1.new
+            result = transformer.transform('homework')
+
+            expect(result).to eq 'qjvzfjat'
+        end
     end
 end
