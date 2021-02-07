@@ -1,6 +1,8 @@
 class Exercise
     def incrementing_aoi(input)
-        return true if input.empty?
+        if input.empty?
+            return 1
+        end
 
         array_size = input.size
         result = 0
@@ -15,4 +17,8 @@ class Exercise
 
         result + 1
     end
+
+    # def convert_increment(input)
+        
+    # end
 end
