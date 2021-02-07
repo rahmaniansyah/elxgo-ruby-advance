@@ -3,12 +3,13 @@ class Exercise
         return true if input.empty?
 
         array_size = input.size
+        result = 0
         input.each do |number|
-            result = 0
             if !number.is_a? Integer
                 return false
             else
-                result += number * (array_size*10)
+                result += number * (10**(array_size-1))
+                array_size -= 1
             end
         end
 
