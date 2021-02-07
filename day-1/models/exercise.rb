@@ -1,5 +1,7 @@
 class Exercise
     def incrementing_aoi(input)
-        return input.is_a? Integer
+        if !input.is_a? Integer
+            return false
+        end
     end
 end
