@@ -1,5 +1,8 @@
 class Exercise
     def incrementing_aoi(input)
+        if input.empty?
+            return [1]
+        end
         # if input.empty?
         #     return 1
         # else
