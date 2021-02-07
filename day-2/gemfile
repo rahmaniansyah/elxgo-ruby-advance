@@ -7,3 +7,6 @@ gem 'sinatra'
 
 # Unit test gem for ruby
 gem 'rspec'
+
+# coverage code
+gem 'simplecov'
