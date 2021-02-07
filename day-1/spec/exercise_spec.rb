@@ -20,5 +20,12 @@ RSpec.describe Exercise do
 
             expect(result).to eq [6]
         end
+
+        it 'returns [5,6,2] when input is [5,6,1]' do
+            incrementer = Exercise.new
+            result = incrementer.incrementing_aoi([5,6,1])
+
+            expect(result).to eq [5,6,2]
+        end
     end
 end
