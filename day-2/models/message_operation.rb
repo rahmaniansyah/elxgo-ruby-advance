@@ -1,12 +1,10 @@
 require './models/email_utility.rb'
 
 class MessageOperation
-    attr_accessor :sender, :recipient, :message
+    # attr_accessor :sender, :recipient, :message
     
-    def initialize
-        @sender = sender
-        @recipient = recipient
-        @message = message
+    def initialize(email_utility)
+        @email_utility = email_utility
     end
     
     def self.send_email

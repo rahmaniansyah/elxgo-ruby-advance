@@ -9,10 +9,10 @@ class EmailUtility
     end
     
     def self.send_email
-        "we are sending the email"
+        # "we are sending the email"
     end
 
     def retrieve_email(from)
-        "we are retrieve the email"
+        # "we are retrieve the email"
     end
 end
