@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/mekari/Belajar/elxgo-ruby-advance/final-project/spec/bookshelf_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mekari/Belajar/elxgo-ruby-advance/final-project/models/bookshelf.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1612882693
+  }
+}

@@ -1,0 +1,12 @@
+# Gemfile to see installed gem within the application
+
+source 'https://rubygems.org'
+
+# Ruby sinatra
+gem 'sinatra'
+
+# Unit test gem for ruby
+gem 'rspec'
+
+# coverage code
+gem 'simplecov'
