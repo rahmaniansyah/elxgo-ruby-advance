@@ -1,0 +1,9 @@
+day-1/*.txt
+day-1/Gemfile.lock
+# day-1/coverage/*.*
+
+day-2/*.txt
+day-2/Gemfile.lock
+# day-2/coverage/*.*
+
+final-project/coverage/*.*

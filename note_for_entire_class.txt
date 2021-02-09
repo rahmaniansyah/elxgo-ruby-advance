@@ -1,0 +1,50 @@
+Require untuk Final project
+> TDD
+> SimpleCov
+> Mock & Stub (masih harus diperdalam)
+
+
+limited number of bookshelves (n)
+all of them have the same size (x) baris
+                               (y) kolom
+                               < 100
+01-02-01 01-02-02 01-02-03
+01 = shelf id
+02 = x baris
+03 = y kolom
+
+buku = ISBN | Title | author
+kalau input Di assign ke shelf yg kosong
+kalau panggil buku input no shelf
+kalau pengen ambil buku shelf buku tsb kosong
+
+bisa searcing
+    - input ISBN => menampilkan slot address
+    - menampilkan seluruh buku dan konten dengan slot address
+    - berdasarkan Title
+    - berdasarkan author
+
+command :
+build_library
+put_book
+take_book_form
+find_book
+list_books
+search
+
+>> generate shelf indexes
+shelf_indexes = Array.new
+for row in 1..x
+    for column in 1..y
+        for row in 1..x
+            shelf_indexes.push("0#{n}0#{row}0#{column}")
+        end
+    end
+end
+shelf["010101"][:status]
+
+>> self.build
+
+
+Clean code
+> penamaan : buat nama yang berarti dan dapat dikenal

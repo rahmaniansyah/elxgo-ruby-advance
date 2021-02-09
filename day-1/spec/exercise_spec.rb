@@ -1,7 +1,4 @@
 
-require 'simplecov'
-SimpleCov.start
-
 require './models/exercise.rb'
 
 # terdapat input array of integer
