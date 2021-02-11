@@ -1,4 +1,11 @@
 class Bookshelf
+
+    attr_accessor :indexes
+
+    def initialize(indexes = nil)
+        @indexes = indexes
+    end
+
     def generate_shelf_indexes(params)
         shelf_indexes = Array.new
         for row in 1..params["row"]
@@ -8,5 +15,9 @@ class Bookshelf
         end
         
         shelf_indexes
+    end
+
+    def self.build
+        
     end
 end
