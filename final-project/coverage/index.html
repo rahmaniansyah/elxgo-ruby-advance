@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-12T21:55:01+07:00">2021-02-12T21:55:01+07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-12T21:59:10+07:00">2021-02-12T21:59:10+07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.05
+         1.58
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>20</b> relevant lines,
-    <span class="green"><b>20</b> lines covered</span> and
+    <b>26</b> relevant lines,
+    <span class="green"><b>26</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,20 +73,20 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5cbf729c3ba65e89a6c1527184233613ad7d0521" class="src_link" title="models/bookshelf.rb">models/bookshelf.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">36</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">38</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">13</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.08</td>
+            <td class="cell--number">2.15</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#729540bc2ac50ab157ab950da9250e99ee2cb3b4" class="src_link" title="spec/bookshelf_spec.rb">spec/bookshelf_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">40</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">13</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>13</b> relevant lines.
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -191,8 +191,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="6">
+            <span class="hits">2</span>
             
 
             
@@ -202,8 +202,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            <span class="hits">2</span>
             
 
             
@@ -213,8 +213,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="8">
+            <span class="hits">2</span>
             
 
             
@@ -257,8 +257,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="12">
+            <span class="hits">2</span>
             
 
             
@@ -268,46 +268,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">            for row in 1..rows</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">                for column in 1..columns</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="15">
+          <li class="covered" data-hits="2" data-linenumber="13">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">                    shelf_indexes.push(&quot;0#{book_ids}0#{row}0#{column}&quot;)</code>
+            <code class="ruby">            for book_id in 1..book_ids</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="covered" data-hits="3" data-linenumber="14">
+            <span class="hits">3</span>
             
+
+            
+
+            <code class="ruby">                for row in 1..rows</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="15">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">                end</code>
+            <code class="ruby">                    for column in 1..columns</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="16">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">                        shelf_indexes.push(&quot;0#{book_id}0#{row}0#{column}&quot;)</code>
           </li>
         </div>
       
@@ -318,18 +318,18 @@
 
             
 
-            <code class="ruby">            end</code>
+            <code class="ruby">                    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="18">
+            
             
 
             
 
-            <code class="ruby">        shelf_indexes</code>
+            <code class="ruby">                end</code>
           </li>
         </div>
       
@@ -340,18 +340,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">            end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="20">
+            <span class="hits">2</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        shelf_indexes</code>
           </li>
         </div>
       
@@ -362,7 +362,7 @@
 
             
 
-            <code class="ruby">    # def self.build</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -373,7 +373,7 @@
 
             
 
-            <code class="ruby">    #     indexes = generate_shelf_indexes(book_ids, rows, columns)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -384,7 +384,7 @@
 
             
 
-            <code class="ruby">    #     shelves = {}</code>
+            <code class="ruby">    # def self.build</code>
           </li>
         </div>
       
@@ -395,7 +395,7 @@
 
             
 
-            <code class="ruby">    #     indexes.inject({}) do |hash, index|</code>
+            <code class="ruby">    #     indexes = generate_shelf_indexes(book_ids, rows, columns)</code>
           </li>
         </div>
       
@@ -406,7 +406,7 @@
 
             
 
-            <code class="ruby">    #         hash[index] = nil</code>
+            <code class="ruby">    #     shelves = {}</code>
           </li>
         </div>
       
@@ -417,7 +417,7 @@
 
             
 
-            <code class="ruby">    #         shelves = hash</code>
+            <code class="ruby">    #     indexes.inject({}) do |hash, index|</code>
           </li>
         </div>
       
@@ -428,7 +428,7 @@
 
             
 
-            <code class="ruby">    #     end</code>
+            <code class="ruby">    #         hash[index] = nil</code>
           </li>
         </div>
       
@@ -439,7 +439,7 @@
 
             
 
-            <code class="ruby">    #     shelves</code>
+            <code class="ruby">    #         shelves = hash</code>
           </li>
         </div>
       
@@ -450,7 +450,7 @@
 
             
 
-            <code class="ruby">        </code>
+            <code class="ruby">    #     end</code>
           </li>
         </div>
       
@@ -461,7 +461,7 @@
 
             
 
-            <code class="ruby">    #     if shelves.size == book_ids*rows*columns</code>
+            <code class="ruby">    #     shelves</code>
           </li>
         </div>
       
@@ -472,7 +472,7 @@
 
             
 
-            <code class="ruby">    #         for book_id in 1..book_ids</code>
+            <code class="ruby">        </code>
           </li>
         </div>
       
@@ -483,7 +483,7 @@
 
             
 
-            <code class="ruby">    #             puts &quot;Shelf #{book_id} with #{rows} rows and #{columns} columns is added&quot;</code>
+            <code class="ruby">    #     if shelves.size == book_ids*rows*columns</code>
           </li>
         </div>
       
@@ -494,7 +494,7 @@
 
             
 
-            <code class="ruby">    #         end</code>
+            <code class="ruby">    #         for book_id in 1..book_ids</code>
           </li>
         </div>
       
@@ -505,7 +505,7 @@
 
             
 
-            <code class="ruby">    #     end</code>
+            <code class="ruby">    #             puts &quot;Shelf #{book_id} with #{rows} rows and #{columns} columns is added&quot;</code>
           </li>
         </div>
       
@@ -516,12 +516,34 @@
 
             
 
-            <code class="ruby">    # end</code>
+            <code class="ruby">    #         end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">    #     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">    # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -550,8 +572,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>13</b> relevant lines.
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -690,40 +712,40 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # context &#39;.build&#39; do</code>
+            
+
+            <code class="ruby">        it &#39;return [&quot;010101&quot;, &quot;010102&quot;, &quot;020101&quot;, &quot;020102&quot;] when input 2,1,2&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
             
+
+            
+
+            <code class="ruby">            bookshelf = Bookshelf.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    #     it &#39;return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2&#39; do</code>
+            <code class="ruby">            result = bookshelf.generate_shelf_indexes(2,1,2)</code>
           </li>
         </div>
       
@@ -734,29 +756,29 @@
 
             
 
-            <code class="ruby">    #         bookshelf = Bookshelf.new(book_id, row, column)</code>
+            <code class="ruby">            </code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #         expect(bookshelf.create).to eq &quot;Shelf 1 with 1 rows and 3 columns is added&quot;</code>
+            
+
+            <code class="ruby">            expeted_result = [&quot;010101&quot;, &quot;010102&quot;, &quot;020101&quot;, &quot;020102&quot;]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #     end</code>
+            
+
+            <code class="ruby">            expect(result).to eq expeted_result</code>
           </li>
         </div>
       
@@ -767,7 +789,7 @@
 
             
 
-            <code class="ruby">    # end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -778,7 +800,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -789,7 +811,7 @@
 
             
 
-            <code class="ruby">    # context &#39;.build&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -800,7 +822,7 @@
 
             
 
-            <code class="ruby">    #     it &#39;return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2&#39; do</code>
+            <code class="ruby">    # context &#39;.build&#39; do</code>
           </li>
         </div>
       
@@ -811,7 +833,7 @@
 
             
 
-            <code class="ruby">    #         input_user = &quot;build_library|2|1|3&quot;</code>
+            <code class="ruby">    #     it &#39;return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2&#39; do</code>
           </li>
         </div>
       
@@ -822,7 +844,7 @@
 
             
 
-            <code class="ruby">    #         shelf_indexes = [&quot;010101&quot;, &quot;010102&quot;]</code>
+            <code class="ruby">    #         bookshelf = Bookshelf.new(book_id, row, column)</code>
           </li>
         </div>
       
@@ -833,7 +855,7 @@
 
             
 
-            <code class="ruby">    #         bookshelf_params = {&quot;id&quot;=&gt; 1, &quot;row&quot;=&gt; 1, &quot;column&quot;=&gt; 2}</code>
+            <code class="ruby">    #         expect(bookshelf.create).to eq &quot;Shelf 1 with 1 rows and 3 columns is added&quot;</code>
           </li>
         </div>
       
@@ -844,7 +866,7 @@
 
             
 
-            <code class="ruby">            </code>
+            <code class="ruby">    #     end</code>
           </li>
         </div>
       
@@ -855,7 +877,7 @@
 
             
 
-            <code class="ruby">    #         bookshelf = Bookshelf.new(shelf_indexes, bookshelf_params)</code>
+            <code class="ruby">    # end</code>
           </li>
         </div>
       
@@ -866,7 +888,7 @@
 
             
 
-            <code class="ruby">            </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -877,7 +899,7 @@
 
             
 
-            <code class="ruby">    #         expect(bookshelf.build).to eq &quot;Shelf 1 with 1 rows and 3 columns is added&quot;</code>
+            <code class="ruby">    # context &#39;.build&#39; do</code>
           </li>
         </div>
       
@@ -888,7 +910,7 @@
 
             
 
-            <code class="ruby">    #     end</code>
+            <code class="ruby">    #     it &#39;return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2&#39; do</code>
           </li>
         </div>
       
@@ -899,12 +921,100 @@
 
             
 
-            <code class="ruby">    # end</code>
+            <code class="ruby">    #         input_user = &quot;build_library|2|1|3&quot;</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">    #         shelf_indexes = [&quot;010101&quot;, &quot;010102&quot;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">    #         bookshelf_params = {&quot;id&quot;=&gt; 1, &quot;row&quot;=&gt; 1, &quot;column&quot;=&gt; 2}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">            </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">    #         bookshelf = Bookshelf.new(shelf_indexes, bookshelf_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">            </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">    #         expect(bookshelf.build).to eq &quot;Shelf 1 with 1 rows and 3 columns is added&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby">    #     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby">    # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 

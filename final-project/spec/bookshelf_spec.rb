@@ -9,6 +9,14 @@ RSpec.describe Bookshelf do
             expeted_result = ["010101", "010102"]
             expect(result).to eq expeted_result
         end
+
+        it 'return ["010101", "010102", "020101", "020102"] when input 2,1,2' do
+            bookshelf = Bookshelf.new
+            result = bookshelf.generate_shelf_indexes(2,1,2)
+            
+            expeted_result = ["010101", "010102", "020101", "020102"]
+            expect(result).to eq expeted_result
+        end
     end
 
     # context '.build' do

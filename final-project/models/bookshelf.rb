@@ -10,9 +10,11 @@ class Bookshelf
 
     def generate_shelf_indexes(book_ids, rows, columns)
         shelf_indexes = Array.new
-            for row in 1..rows
-                for column in 1..columns
-                    shelf_indexes.push("0#{book_ids}0#{row}0#{column}")
+            for book_id in 1..book_ids
+                for row in 1..rows
+                    for column in 1..columns
+                        shelf_indexes.push("0#{book_id}0#{row}0#{column}")
+                    end
                 end
             end
         shelf_indexes
