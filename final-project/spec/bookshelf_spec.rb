@@ -18,23 +18,15 @@ RSpec.describe Bookshelf do
             expect(result).to eq expeted_result
         end
     end
+    
+    # let(:bookshelf) { Bookshelf.new(1,1,2) }
 
-    # context '.build' do
-    #     it 'return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2' do
-    #         bookshelf = Bookshelf.new(book_id, row, column)
-    #         expect(bookshelf.create).to eq "Shelf 1 with 1 rows and 3 columns is added"
-    #     end
-    # end
+    context '.build' do
+        it 'return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2' do
+            allow(Bookshelf).to receive(:build).and_return("Shelf 1 with 1 rows and 2 columns is added")
+            expect(described_class.new(1,1,2)).to eq "Shelf 1 with 1 rows and 2 columns is added"
+        end
+    end
 
-    # context '.build' do
-    #     it 'return Shelf 1 with 1 rows and 2 columns is added when input build_library|1|1|2' do
-    #         input_user = "build_library|2|1|3"
-    #         shelf_indexes = ["010101", "010102"]
-    #         bookshelf_params = {"id"=> 1, "row"=> 1, "column"=> 2}
-            
-    #         bookshelf = Bookshelf.new(shelf_indexes, bookshelf_params)
-            
-    #         expect(bookshelf.build).to eq "Shelf 1 with 1 rows and 3 columns is added"
-    #     end
-    # end
+    
 end
