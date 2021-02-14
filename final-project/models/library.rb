@@ -10,9 +10,9 @@ class Library
     def build
         shelves = {}
         response = []
-        for bookshelf in 1..@bookshelves
-            for row in 1..@rows
-                for column in 1..@columns
+        for bookshelf in 1..bookshelves
+            for row in 1..rows
+                for column in 1..columns
                     shelves["0#{bookshelf}0#{row}0#{column}"] = nil
                 end
             end
