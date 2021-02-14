@@ -22,8 +22,10 @@ RSpec.describe Library do
             isbn = 123
             title = "title"
             author = "author"
+            
+            library.build
 
-
+            expect(library.put_book(isbn,title,author)).to eq "Allocated address: 010101"
         end
     end
 end

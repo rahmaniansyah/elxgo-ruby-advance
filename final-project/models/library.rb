@@ -21,8 +21,17 @@ class Library
         return response 
     end
 
-    def put_book
-        puts shelves
+    def put_book(isbn, title, author)
+        response = "Your shelves are full"
+        
+        @shelves.keys.each do |key|
+            if @shelves[key].nil?
+                @shelves[key] = {"isbn"=>isbn, "title"=>title, "author"=>author}
+                response = "Allocated address: #{key}"
+                break
+            end
+        end
+        return response
     end
 
 end
