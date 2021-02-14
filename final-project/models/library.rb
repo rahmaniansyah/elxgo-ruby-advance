@@ -23,7 +23,7 @@ class Library
 
     def put_book(isbn, title, author)
         response = "Your shelves are full"
-        
+        puts @shelves
         @shelves.keys.each do |key|
             if @shelves[key].nil?
                 @shelves[key] = {"isbn"=>isbn, "title"=>title, "author"=>author}
@@ -31,6 +31,7 @@ class Library
                 break
             end
         end
+        # puts @shelves
         return response
     end
 
