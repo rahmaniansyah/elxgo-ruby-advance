@@ -22,7 +22,11 @@ class CommandParser
                 
                 libraries.each {|library| puts library}
             when 'put_book'
-                puts 'put_book'
+                isbn = args[0]
+                title = args[1]
+                author = args[2]
+
+                libraries.put_book(isbn,title,author)
             when 'take_book_form'
                 puts 'take_book_form'
             when 'find_book'
