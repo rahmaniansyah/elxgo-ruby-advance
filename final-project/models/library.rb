@@ -34,4 +34,12 @@ class Library
         return response
     end
 
+    def take_book_from(slot)
+        return "Invalid code!" unless @shelves.keys.include?(slot)
+        puts @shelves[slot]
+        @shelves[slot] = nil
+        puts @shelves[slot]
+        return "Slot #{slot} is free" 
+    end
+
 end

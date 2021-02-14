@@ -51,4 +51,17 @@ RSpec.describe Library do
             expect(library.put_book(isbn,title,author)).to eq "All shelves are full!"
         end
     end
+
+    context '#take_book_from' do
+        it 'returns Slot 010101 is free when input 010101' do
+            isbn = 123
+            title = "title"
+            author = "author"
+
+            library.build
+            library.put_book(isbn,title,author)
+
+            expect(library.take_book_from("010101")).to eq "Slot 010101 is free"
+        end
+    end
 end
