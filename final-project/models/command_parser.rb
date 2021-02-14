@@ -17,10 +17,9 @@ class CommandParser
                 rows = args[1].to_i
                 columns = args[2].to_i
                 
-                puts "#{bookshelves} #{rows} #{columns}"
-                
                 library = Library.new(bookshelves,rows,columns)
                 libraries = library.build
+                
                 libraries.each {|library| puts library}
             when 'put_book'
                 puts 'put_book'
