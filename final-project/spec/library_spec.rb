@@ -63,5 +63,10 @@ RSpec.describe Library do
 
             expect(library.take_book_from("010101")).to eq "Slot 010101 is free"
         end
+
+        it 'returns Invalid code! when input unexist code' do
+            library.build
+            expect(library.take_book_from("999")).to eq "Invalid code!"
+        end
     end
 end
