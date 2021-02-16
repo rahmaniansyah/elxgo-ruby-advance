@@ -1,16 +1,16 @@
 module Refactoring
   class Item
-    attr_reader :name, :price, :type, :stock, :tags
+    attr_reader :item
 
-    def initialize(type, name, price, stock, tags)
-      type_valid = validate_type(type)
-      tags_valid = validate_tags(type, tags)
+    def initialize(item)
+      type_valid = validate_type(item["type"])
+      tags_valid = validate_tags(item["type"], item["tags"])
       if type_valid and tags_valid
-        @type = type
-        @name = name
-        @price = price
-        @stock =  stock
-        @tags = tags
+        @type = item["type"]
+        @name = item["name"]
+        @price = item["price"]
+        @stock =  item["stock"]
+        @tags = item["tags"]
       else
         raise ArgumentError
       end

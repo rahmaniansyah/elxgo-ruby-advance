@@ -1,6 +1,14 @@
 module Refactoring
   class Order
     attr_reader :order_items
+    attr_accessor :voucher, :tax, :delivery_cost
+
+    def initialize(order_items, quantity, voucher, tax, delivery_cost)
+      @order_items = OrderItem.new(order_items, quantity)
+      @voucher = voucher
+      @tax = tax
+      @delivery_cost = delivery_cost
+    end
 
     def calculate_price(voucher, tax, delivery_cost)
       price = 0
@@ -13,7 +21,7 @@ module Refactoring
             price += (order_item.quantity * order_item.item.price) * 0.9
           elsif order_item.quantity > 2
             price += (order_item.quantity * order_item.item.price) * 0.95
-          else
+          end
         else
           price += order_item.quantity * order_item.item.price
         end
@@ -38,6 +46,7 @@ module Refactoring
           snack_items.append(order_item)
         else
           raise "item type#{order_item.item.type} is not supported"
+        end
       end
 
       print "Food items:\n"
