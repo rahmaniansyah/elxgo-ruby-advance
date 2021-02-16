@@ -30,16 +30,20 @@ class Library
                 break
             end
         end
-        # puts @shelves
+        puts @shelves
         return response
     end
 
     def take_book_from(slot)
         return "Invalid code!" unless @shelves.keys.include?(slot)
-        # puts @shelves[slot]
+        puts @shelves[slot]
         @shelves[slot] = nil
         # puts @shelves[slot]
         return "Slot #{slot} is free" 
+    end
+
+    def find_book(isbn)
+        slot = infoHash["employee"].select {|k| k["level"] == "2"}
     end
 
 end

@@ -69,4 +69,17 @@ RSpec.describe Library do
             expect(library.take_book_from("999")).to eq "Invalid code!"
         end
     end
+
+    context '#find_book' do
+        it 'return Found the book at 010101 when input isbn 123' do
+            isbn = 123
+            title = "title"
+            author = "author"
+
+            library.build
+            library.put_book(isbn,title,author)
+
+            expect(library.find_book("123")).to eq "Found the book at 010101"
+        end
+    end
 end
