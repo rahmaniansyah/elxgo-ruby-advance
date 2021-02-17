@@ -117,4 +117,14 @@ RSpec.describe Library do
             expect(first_library.search_books_by_title("Childern's life")).to eq "Book not found!"
         end
     end
+
+    context '#search_books_by_author' do
+        it 'return books when input existing author name' do
+            first_library.build
+            first_library.put_book(isbn1,title1,author1)
+            first_library.put_book(isbn2,title2,author2)
+
+            expect(first_library.search_books_by_author("Kent Beck")).to eq ["010102: 9780201485677 | Refactoring | Martin Fowler, Kent Beck"]
+        end
+    end
 end
