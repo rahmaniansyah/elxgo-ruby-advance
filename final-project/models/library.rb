@@ -60,7 +60,7 @@ class Library
                 response << "#{key}: #{shelf["isbn"]} | #{shelf["title"]} | #{shelf["author"]}"
             end
         end
-        return response.nil? ? "No books at all!" : response
+        return response.empty? ? "No books at all!" : response
     end
 
 end

@@ -78,5 +78,11 @@ RSpec.describe Library do
 
             expect(first_library.list_books).to eq ["010101: 123 | title | author", "010102: 123 | title | author"]
         end
+
+        it 'return No books at all! when input shelves are empty' do
+            first_library.build
+
+            expect(first_library.list_books).to eq "No books at all!"
+        end
     end
 end
