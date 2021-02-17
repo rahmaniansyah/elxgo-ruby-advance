@@ -30,7 +30,7 @@ class Library
                 break
             end
         end
-        # puts @shelves
+        puts @shelves
         return response
     end
 
@@ -43,7 +43,14 @@ class Library
     end
 
     def find_book(isbn)
-        slot = infoHash["employee"].select {|k| k["level"] == "2"}
+        slot = nil
+        @shelves.select do |key, shelf| 
+            if !shelf.nil? && shelf["isbn"] == isbn
+                slot = key
+            end
+        end
+        response = slot.nil? ? "Book not found!" : "Found the book at #{slot}"
+        return response
     end
 
 end

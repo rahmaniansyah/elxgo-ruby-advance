@@ -4,7 +4,7 @@ RSpec.describe Library do
     let(:first_library) {Library.new(1,1,2)}
     let(:second_library) {Library.new(2,1,3)}
 
-    let(:isbn) { 123 }
+    let(:isbn) { "123" }
     let(:title) { "title" }
     let(:author) { "author" }
 
@@ -55,16 +55,12 @@ RSpec.describe Library do
         end
     end
 
-    # context '#find_book' do
-    #     it 'return Found the book at 010101 when input isbn 123' do
-    #         isbn = 123
-    #         title = "title"
-    #         author = "author"
+    context '#find_book' do
+        it 'return Found the book at 010101 when input isbn 123' do
+            first_library.build
+            first_library.put_book(isbn,title,author)
 
-    #         library.build
-    #         library.put_book(isbn,title,author)
-
-    #         expect(library.find_book("123")).to eq "Found the book at 010101"
-    #     end
-    # end
+            expect(first_library.find_book("123")).to eq "Found the book at 010101"
+        end
+    end
 end
