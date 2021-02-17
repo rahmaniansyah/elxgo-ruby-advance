@@ -126,5 +126,13 @@ RSpec.describe Library do
 
             expect(first_library.search_books_by_author("Kent Beck")).to eq ["010102: 9780201485677 | Refactoring | Martin Fowler, Kent Beck"]
         end
+
+        it 'return array of string when input books with the similiar author name' do
+            first_library.build
+            first_library.put_book(isbn1,title1,author1)
+            first_library.put_book(isbn3,title3,author3)
+
+            expect(first_library.search_books_by_author("Rowling")).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling", "010102: 9780807281918 | Harry Potter 2 | J. K. Rowling"]
+        end
     end
 end
