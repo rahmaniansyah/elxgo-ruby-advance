@@ -62,5 +62,11 @@ RSpec.describe Library do
 
             expect(first_library.find_book("123")).to eq "Found the book at 010101"
         end
+
+        it 'return Book not found! when input not exists' do
+            first_library.build
+
+            expect(first_library.find_book("123")).to eq "Book not found!"
+        end
     end
 end
