@@ -109,5 +109,12 @@ RSpec.describe Library do
 
             expect(first_library.search_books_by_title("Harry Potter")).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling", "010102: 9780807281918 | Harry Potter 2 | J. K. Rowling"]
         end
+
+        it 'return Book not found! when input not exists' do
+            first_library.build
+            first_library.put_book(isbn1,title1,author1)
+
+            expect(first_library.search_books_by_title("Childern's life")).to eq "Book not found!"
+        end
     end
 end
