@@ -69,4 +69,14 @@ RSpec.describe Library do
             expect(first_library.find_book("123")).to eq "Book not found!"
         end
     end
+
+    context '#list_books' do
+        it 'return list of books when input list_books' do
+            first_library.build
+            first_library.put_book(isbn,title,author)
+            first_library.put_book(isbn,title,author)
+
+            expect(first_library.list_books).to eq ["010101: 123 | title | author", "010102: 123 | title | author"]
+        end
+    end
 end

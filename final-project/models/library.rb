@@ -30,7 +30,7 @@ class Library
                 break
             end
         end
-        puts @shelves
+        # puts @shelves
         return response
     end
 
@@ -51,6 +51,16 @@ class Library
         end
         response = slot.nil? ? "Book not found!" : "Found the book at #{slot}"
         return response
+    end
+
+    def list_books
+        response = []
+        @shelves.select do |key, shelf| 
+            if !shelf.nil?
+                response << "#{key}: #{shelf["isbn"]} | #{shelf["title"]} | #{shelf["author"]}"
+            end
+        end
+        return response.nil? ? "No books at all!" : response
     end
 
 end
