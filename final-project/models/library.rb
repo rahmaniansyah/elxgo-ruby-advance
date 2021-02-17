@@ -63,4 +63,14 @@ class Library
         return response.empty? ? "No books at all!" : response
     end
 
+    def search_books_by_title(title)
+        response = []
+        @shelves.select do |key, shelf| 
+            if !shelf.nil? && shelf["title"].include?(title)
+                response << "#{key}: #{shelf["isbn"]} | #{shelf["title"]} | #{shelf["author"]}"
+            end
+        end
+        return response.empty? ? "Book not found!" : response
+    end
+
 end

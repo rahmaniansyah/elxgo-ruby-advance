@@ -90,7 +90,12 @@ RSpec.describe Library do
         end
     end
 
-    # context '#search_books_by_title' do
+    context '#search_books_by_title' do
+        it 'return 010101: 9780747532743 | Harry Potter 1 | J. K. Rowling when input Harry Potter' do
+            first_library.build
+            first_library.put_book(isbn1,title1,author1)
 
-    # end
+            expect(first_library.search_books_by_title("Harry Potter")).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling"]
+        end
+    end
 end
