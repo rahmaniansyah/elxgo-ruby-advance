@@ -12,6 +12,10 @@ RSpec.describe Library do
     let(:title2) { "Refactoring" }
     let(:author2) { "Martin Fowler, Kent Beck" }
 
+    let(:isbn3) { "9780807281918" }
+    let(:title3) { "Harry Potter 2" }
+    let(:author3) { "J. K. Rowling" }
+
     context '#build' do
         it 'return ["Shelf 1 with 1 rows and 2 columns is added"] when params input |1|1|2' do
             expect(first_library.build).to eq ["Shelf 1 with 1 rows and 2 columns is added"]
@@ -96,6 +100,14 @@ RSpec.describe Library do
             first_library.put_book(isbn1,title1,author1)
 
             expect(first_library.search_books_by_title("Harry Potter")).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling"]
+        end
+
+        it 'return array of string when input books with the similiar title' do
+            first_library.build
+            first_library.put_book(isbn1,title1,author1)
+            first_library.put_book(isbn3,title3,author3)
+
+            expect(first_library.search_books_by_title("Harry Potter")).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling", "010102: 9780807281918 | Harry Potter 2 | J. K. Rowling"]
         end
     end
 end
