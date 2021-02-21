@@ -4,6 +4,7 @@ require './lib/library.rb'
 RSpec.describe Book do
    let(:first_library) {Library.new(1,1,2)}
 
+   let(:book) {Book.new}
    let(:book_1) {Book.new("9780747532743", "Harry Potter 1", "J. K. Rowling")}
    let(:book_2) {Book.new("9780201485677", "Refactoring", "Martin Fowler, Kent Beck")}
    let(:book_3) {Book.new("9780807281918", "Harry Potter 2", "J. K. Rowling")}
@@ -11,6 +12,19 @@ RSpec.describe Book do
    before(:each) do
       first_library.build
    end
+
+   context '#all' do
+		it 'return list of books when input list_books' do
+			book_1.put_book
+			book_2.put_book
+
+			expect(book.all).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling", "010102: 9780201485677 | Refactoring | Martin Fowler, Kent Beck"]
+		end
+
+		it 'return No books at all! when input shelves are empty' do
+			expect(book.all).to eq "No books at all!"
+		end
+	end
     
    describe '#put_book' do
       it 'returns Allocated address: 010101 when input first book' do

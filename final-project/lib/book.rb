@@ -9,6 +9,16 @@ class Book < Library
         @author = author
     end
 
+   def all
+      response = []
+      @@shelves.select do |key, shelf| 
+          if !shelf.nil?
+              response << generate_wording(key, shelf["isbn"], shelf["title"], shelf["author"])
+          end
+      end
+      return response.empty? ? "No books at all!" : response
+   end
+
     def put_book
         response = "All shelves are full!"
         @@shelves.keys.each do |key|

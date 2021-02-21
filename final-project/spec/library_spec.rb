@@ -32,17 +32,4 @@ RSpec.describe Library do
          expect(first_library.empty_slot("999")).to eq "Invalid code!"
       end
    end
-    
-	context '#list_books' do
-		it 'return list of books when input list_books' do
-			book_1.put_book
-			book_2.put_book
-
-			expect(first_library.list_books).to eq ["010101: 9780747532743 | Harry Potter 1 | J. K. Rowling", "010102: 9780201485677 | Refactoring | Martin Fowler, Kent Beck"]
-		end
-
-		it 'return No books at all! when input shelves are empty' do
-			expect(first_library.list_books).to eq "No books at all!"
-		end
-	end
 end

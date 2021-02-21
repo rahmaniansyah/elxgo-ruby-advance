@@ -26,19 +26,4 @@ class Library
         @@shelves[slot] = nil
         return "Slot #{slot} is free" 
     end
-
-    def list_books
-        response = []
-        @@shelves.select do |key, shelf| 
-            if !shelf.nil?
-                response << generate_wording(key, shelf["isbn"], shelf["title"], shelf["author"])
-            end
-        end
-        return response.empty? ? "No books at all!" : response
-    end
-
-    def generate_wording(key, isbn, title, author)
-        "#{key}: #{isbn} | #{title} | #{author}"
-    end
-
 end
