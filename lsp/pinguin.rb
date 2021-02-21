@@ -1,11 +1,7 @@
-require_relative 'bird'
+require_relative 'flightless_bird'
 
-class Pinguin < Bird
-  def sound
-    "wack"
-  end
-  
-  def fly
-    raise "I can't fly"
-  end
+class Pinguin < FlightlessBird
+   def sound
+      "wack"
+   end
 end
