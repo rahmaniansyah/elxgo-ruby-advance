@@ -2,6 +2,9 @@ require './lib/library.rb'
 require './lib/book.rb'
 
 class CommandParser
+   def initialize
+      @book = Book.new
+   end
 
    def run
       puts "----------------------"
@@ -48,8 +51,8 @@ class CommandParser
       title = args[1]
       author = args[2]
 
-      book = Book.new(isbn,title,author)
-      response = book.put_book
+      new_book = Book.new(isbn,title,author)
+      response = new_book.put_book
 
       puts response
    end
@@ -57,8 +60,7 @@ class CommandParser
    def execute_take_book_from(args)
       slot = args[0]
 
-      book = Book.new
-      response = book.delete_by_slot(slot)
+      response = @book.delete_by_slot(slot)
 
       puts response
    end
@@ -72,8 +74,7 @@ class CommandParser
    end
 
    def execute_list_books
-      book = Book.new
-      response = book.all
+      response = @book.all
 
       puts response
    end
@@ -81,8 +82,7 @@ class CommandParser
    def execute_search_books_by(type,args)
       params = args[0]
 
-      book = Book.new
-      responses = search_books_by(type, params)
+      responses = @book.search_books_by(type, params)
 
       responses.each {|response| puts response}
    end
