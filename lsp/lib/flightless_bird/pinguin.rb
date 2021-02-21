@@ -1,4 +1,4 @@
-require_relative 'flightless_bird'
+require './lib/flightless_bird.rb'
 
 class Pinguin < FlightlessBird
    def sound

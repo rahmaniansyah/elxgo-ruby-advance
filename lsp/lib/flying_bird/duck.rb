@@ -1,4 +1,4 @@
-require_relative 'flying_bird'
+require './lib/flying_bird.rb'
 
 class Duck < FlyingBird
    def sound

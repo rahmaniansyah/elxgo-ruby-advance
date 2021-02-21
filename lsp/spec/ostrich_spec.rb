@@ -1,4 +1,4 @@
-require './ostrich'
+require './lib/flightless_bird/ostrich.rb'
 
 describe Ostrich do 
    it "can sound" do

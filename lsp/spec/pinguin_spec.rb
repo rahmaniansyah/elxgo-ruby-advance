@@ -1,4 +1,4 @@
-require './pinguin'
+require './lib/flightless_bird/pinguin.rb'
 
 describe Pinguin do 
    it "can sound" do
