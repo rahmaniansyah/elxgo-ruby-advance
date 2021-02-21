@@ -21,7 +21,7 @@ class Library
         return response 
     end
 
-    def take_book_from(slot)
+    def empty_slot(slot)
         return "Invalid code!" unless @@shelves.keys.include?(slot)
         @@shelves[slot] = nil
         return "Slot #{slot} is free" 
@@ -36,16 +36,6 @@ class Library
         end
         return response.empty? ? "No books at all!" : response
     end
-
-    # def search_books_by(type, params)
-    #     response = []
-    #     @shelves.select do |key, shelf| 
-    #         if !shelf.nil? && shelf[type].include?(params)
-    #             response << generate_wording(key, shelf["isbn"], shelf["title"], shelf["author"])
-    #         end
-    #     end
-    #     return response.empty? ? "Book not found!" : response
-    # end
 
     def generate_wording(key, isbn, title, author)
         "#{key}: #{isbn} | #{title} | #{author}"

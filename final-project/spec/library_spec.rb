@@ -21,15 +21,15 @@ RSpec.describe Library do
         end
     end
 
-	context '#take_book_from' do
+	context '#empty_slot' do
 		it 'returns Slot 010101 is free when input 010101' do
          book_1.put_book
 
-         expect(first_library.take_book_from("010101")).to eq "Slot 010101 is free"
+         expect(first_library.empty_slot("010101")).to eq "Slot 010101 is free"
       end
 
       it 'returns Invalid code! when input unexist code' do
-         expect(first_library.take_book_from("999")).to eq "Invalid code!"
+         expect(first_library.empty_slot("999")).to eq "Invalid code!"
       end
    end
     
