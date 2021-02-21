@@ -20,10 +20,4 @@ class Library
         end
         return response 
     end
-
-    def empty_slot(slot)
-        return "Invalid code!" unless @@shelves.keys.include?(slot)
-        @@shelves[slot] = nil
-        return "Slot #{slot} is free" 
-    end
 end

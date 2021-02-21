@@ -20,16 +20,4 @@ RSpec.describe Library do
             expect(second_library.build).to eq ["Shelf 1 with 1 rows and 3 columns is added", "Shelf 2 with 1 rows and 3 columns is added"]
         end
     end
-
-	context '#empty_slot' do
-		it 'returns Slot 010101 is free when input 010101' do
-         book_1.put_book
-
-         expect(first_library.empty_slot("010101")).to eq "Slot 010101 is free"
-      end
-
-      it 'returns Invalid code! when input unexist code' do
-         expect(first_library.empty_slot("999")).to eq "Invalid code!"
-      end
-   end
 end

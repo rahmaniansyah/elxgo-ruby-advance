@@ -99,4 +99,16 @@ RSpec.describe Book do
          expect(book_1.search_books_by("author","rahma")).to eq "Book not found!"
       end
    end
+
+   context '#delete_by_slot' do
+		it 'returns Slot 010101 is free when input 010101' do
+         book_1.put_book
+
+         expect(book.delete_by_slot("010101")).to eq "Slot 010101 is free"
+      end
+
+      it 'returns Invalid code! when input unexist code' do
+         expect(book.delete_by_slot("999")).to eq "Invalid code!"
+      end
+   end
 end

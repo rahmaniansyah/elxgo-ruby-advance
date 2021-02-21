@@ -51,6 +51,12 @@ class Book < Library
       return response.empty? ? "Book not found!" : response
    end
 
+   def delete_by_slot(slot)
+      return "Invalid code!" unless @@shelves.keys.include?(slot)
+      @@shelves[slot] = nil
+      return "Slot #{slot} is free" 
+   end
+
    def generate_wording(key, isbn, title, author)
       "#{key}: #{isbn} | #{title} | #{author}"
    end
