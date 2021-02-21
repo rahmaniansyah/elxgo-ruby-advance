@@ -25,9 +25,9 @@ class CommandParser
          when 'list_books'
             execute_list_books
          when 'search_books_by_title'
-            execute_search_books_by_title(args)
+            execute_search_books_by('title',args)
          when 'search_books_by_author'
-            execute_search_books_by_author(args)
+            execute_search_books_by('author',args)
          end
       end while command != 'exit'
    end
@@ -50,11 +50,17 @@ class CommandParser
 
       book = Book.new(isbn,title,author)
       response = book.put_book
+
       puts response
    end
 
    def execute_take_book_from(args)
-      
+      slot = args[0]
+
+      book = Book.new
+      response = book.delete_by_slot(slot)
+
+      puts response
    end
 
    def execute_find_book(args)
@@ -70,5 +76,14 @@ class CommandParser
       response = book.all
 
       puts response
+   end
+
+   def execute_search_books_by(type,args)
+      params = args[0]
+
+      book = Book.new
+      responses = search_books_by(type, params)
+
+      responses.each {|response| puts response}
    end
 end
