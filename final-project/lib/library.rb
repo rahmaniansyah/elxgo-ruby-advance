@@ -1,6 +1,8 @@
 class Library
    def initialize
       @@shelves = {}
+      @commands = {}
+      
    end
 
    @@instance = Library.new
@@ -23,6 +25,4 @@ class Library
       end
       return response 
    end
-
-   # private_class_method :new
 end

@@ -1,4 +1,13 @@
-require './lib/command_parser.rb'
+require './lib/library.rb'
+require './book.rb'
 
-command_parser = CommandParser.new
-command_parser.run
+begin
+   input = gets.chomp
+   command, *args = input.split("|")
+   
+   if command.eql? 'build_library'
+      Library.instance.build(args)
+   else
+      Book.new.execute(command, args)
+   end
+end while command != 'exit'
