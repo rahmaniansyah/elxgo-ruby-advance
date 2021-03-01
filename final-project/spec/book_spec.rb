@@ -2,7 +2,7 @@ require './lib/book.rb'
 require './lib/library.rb'
 
 RSpec.describe Book do
-   let(:first_library) {Library.new(1,1,2)}
+   let(:first_library) {Library.instance}
 
    let(:book) {Book.new}
    let(:book_1) {Book.new("9780747532743", "Harry Potter 1", "J. K. Rowling")}
@@ -10,7 +10,7 @@ RSpec.describe Book do
    let(:book_3) {Book.new("9780807281918", "Harry Potter 2", "J. K. Rowling")}
    
    before(:each) do
-      first_library.build
+      first_library.send(:build, 1,1,2)
    end
 
    context '#all' do

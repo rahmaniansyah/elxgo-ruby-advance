@@ -1,23 +1,28 @@
 class Library
-    attr_reader :bookshelves, :rows, :columns
+   def initialize
+      @@shelves = {}
+   end
 
-    def initialize(bookshelves, rows, columns)
-        @bookshelves = bookshelves
-        @rows = rows
-        @columns = columns
-        @@shelves = {}
-    end
+   @@instance = Library.new
 
-    def build
-        response = []
-        for bookshelf in 1..bookshelves
-            for row in 1..rows
-                for column in 1..columns
-                    @@shelves["0#{bookshelf}0#{row}0#{column}"] = nil
-                end
-            end
-            response << "Shelf #{bookshelf} with #{row} rows and #{columns} columns is added"
-        end
-        return response 
-    end
+   def self.instance
+      @@instance
+   end
+
+   private
+
+   def build(bookshelves = nil, rows = nil, columns = nil)
+      response = []
+      for bookshelf in 1..bookshelves
+         for row in 1..rows
+               for column in 1..columns
+                  @@shelves["0#{bookshelf}0#{row}0#{column}"] = nil
+               end
+         end
+         response << "Shelf #{bookshelf} with #{row} rows and #{columns} columns is added"
+      end
+      return response 
+   end
+
+   # private_class_method :new
 end
