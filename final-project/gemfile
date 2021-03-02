@@ -10,3 +10,5 @@ gem 'rspec'
 
 # coverage code
 gem 'simplecov'
+
+gem 'byebug'

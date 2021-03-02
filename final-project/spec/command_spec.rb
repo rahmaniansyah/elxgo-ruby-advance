@@ -11,7 +11,7 @@ describe 'Command' do
    
    describe PutBookCommand do
       before(:each) do
-         first_library.send(:build, 1,1,2)
+         first_library.send(:build, [1,1,2])
       end
 
       it 'returns Allocated address: 010101 when input first book' do
@@ -38,7 +38,7 @@ describe 'Command' do
 
    describe TakeBookCommand do
       before(:each) do
-         first_library.send(:build, 1,1,2)
+         first_library.send(:build, [1,1,2])
    
          command, *args = put_book_1.split("|")
          book_command.execute(command, args)
@@ -59,7 +59,7 @@ describe 'Command' do
 
    describe FindBookCommand do
       before(:each) do
-         first_library.send(:build, 1,1,2)
+         first_library.send(:build, [1,1,2])
    
          command, *args = put_book_2.split("|")
          book_command.execute(command, args)
@@ -80,7 +80,7 @@ describe 'Command' do
 
    describe ListBookCommand do
       before(:each) do
-         first_library.send(:build, 2,1,2)
+         first_library.send(:build, [2,1,2])
       end
 
       it 'return No books at all! when input shelves are empty' do

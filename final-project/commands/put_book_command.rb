@@ -14,6 +14,13 @@ class PutBookCommand < Command
          end
       end
 
-      response
+      print(response)
+      return response
+   end
+
+   private
+
+   def print(response)
+      puts response
    end
 end

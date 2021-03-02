@@ -12,7 +12,16 @@ class SearchBookCommand < Command
             responses << "#{key}: #{shelf["isbn"]} | #{shelf["title"]} | #{shelf["author"]}"
          end
       end
-      return responses.empty? ? "Book not found!" : print(responses)
+      puts responses.empty?
+      # responses.empty? ? "Book not found!" : print(responses)
+
+      if responses.empty?
+         responses = "Book not found!"
+         puts responses
+      else
+         print(responses)
+      end
+      return responses
    end
 
    private

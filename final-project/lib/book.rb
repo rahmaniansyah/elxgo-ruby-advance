@@ -1,4 +1,3 @@
-# require './lib/word_formatter.rb'
 require_relative '../commands/put_book_command.rb'
 require_relative '../commands/find_book_command.rb'
 require_relative '../commands/list_book_command.rb'

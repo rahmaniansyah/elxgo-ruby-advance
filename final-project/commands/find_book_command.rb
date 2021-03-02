@@ -11,6 +11,20 @@ class FindBookCommand < Command
             slot = key
          end
       end
-      response = slot.nil? ? "Book not found!" : "Found the book at #{slot}"
+      
+      if slot.nil?
+         response = "Book not found!"
+      else
+         response = "Found the book at #{slot}"
+      end
+      
+      print(response)
+      return response
+   end
+
+   private
+   
+   def print(response)
+      puts response
    end
 end
