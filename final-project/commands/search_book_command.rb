@@ -9,7 +9,7 @@ class SearchBookCommand < Command
       responses = []
       library.shelves.select do |key, shelf| 
          if !shelf.nil? && shelf[type].include?(params)
-            responses << @format.sentence(key, shelf["isbn"], shelf["title"], shelf["author"])
+            responses << "#{key}: #{shelf["isbn"]} | #{shelf["title"]} | #{shelf["author"]}"
          end
       end
       return responses.empty? ? "Book not found!" : print(responses)

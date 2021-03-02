@@ -6,7 +6,7 @@ class ListBookCommand < Command
       responses = []
       library.shelves.select do |key, shelf| 
          if !shelf.nil?
-            responses << @format.sentence(key, shelf["isbn"], shelf["title"], shelf["author"])
+            responses << "#{key}: #{shelf["isbn"]} | #{shelf["title"]} | #{shelf["author"]}"
          end
       end
       return responses.empty? ? "No books at all!" : print(responses)
