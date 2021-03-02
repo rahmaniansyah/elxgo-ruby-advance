@@ -1,5 +1,5 @@
 require './lib/library.rb'
-require './book.rb'
+require './lib/book.rb'
 
 begin
    input = gets.chomp

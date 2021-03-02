@@ -1,63 +1,24 @@
-require './lib/library.rb'
 require './lib/word_formatter.rb'
+require_relative '../commands/put_book_command.rb'
+require_relative '../commands/find_book_command.rb'
+require_relative '../commands/list_book_command.rb'
+require_relative '../commands/take_book_command.rb'
+require_relative '../commands/search_book_command.rb'
 
 class Book < Library
-    attr_reader :isbn, :title, :author
-
-    def initialize(isbn = nil, title = nil, author = nil)
-        @isbn = isbn
-        @title = title
-        @author = author
-        @format = WordFormatter.new
-    end
-
-   def all
-      response = []
-      @@shelves.select do |key, shelf| 
-         if !shelf.nil?
-            new_format = WordFormatter.new(key, shelf["isbn"], shelf["title"], shelf["author"])
-            response << new_format.sentence
-         end
-      end
-      return response.empty? ? @format.empty : response
+   def initialize
+      @commands = Hash.new
+      @commands['put_book']               = PutBookCommand.new
+      @commands['take_book_from']         = TakeBookCommand.new
+      @commands['find_book']              = FindBookCommand.new
+      @commands['list_books']             = ListBookCommand.new
+      @commands['search_books_by_title']  = SearchBookCommand.new
+      @commands['search_books_by_author'] = SearchBookCommand.new
    end
 
-    def put_book
-        response = @format.full
-        @@shelves.keys.each do |key|
-            if @@shelves[key].nil?
-               @@shelves[key] = {"isbn"=>isbn, "title"=>title, "author"=>author}
-               response = "Allocated address: #{key}"
-               break
-            end
-        end
-        response
-    end
-
-   def find_book
-      slot = nil
-      @@shelves.select do |key, shelf| 
-         if !shelf.nil? && shelf["isbn"] == isbn
-            slot = key
-         end
-      end
-      response = slot.nil? ? @format.not_found : "Found the book at #{slot}"
-   end
-
-   def search_books_by(type, params)
-      response = []
-      @@shelves.select do |key, shelf| 
-         if !shelf.nil? && shelf[type].include?(params)
-            new_format = WordFormatter.new(key, shelf["isbn"], shelf["title"], shelf["author"])
-            response << new_format.sentence
-         end
-      end
-      return response.empty? ? @format.not_found : response
-   end
-
-   def delete_by_slot(slot)
-      return "Invalid code!" unless @@shelves.keys.include?(slot)
-      @@shelves[slot] = nil
-      return "Slot #{slot} is free" 
+   def execute(command, args)
+      args << command
+      command = @commands[command]
+      command.execute(args)
    end
 end

@@ -1,14 +1,5 @@
 class WordFormatter
-   attr_reader :slot, :isbn, :title, :author
-
-   def initialize(slot = nil, isbn = nil, title = nil, author = nil)
-      @slot = slot
-      @isbn = isbn
-      @title = title
-      @author = author
-   end
-
-   def sentence
+   def sentence(slot, isbn, title, author)
       "#{slot}: #{isbn} | #{title} | #{author}"
    end
 

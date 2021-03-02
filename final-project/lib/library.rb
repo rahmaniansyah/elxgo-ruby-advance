@@ -1,6 +1,8 @@
 class Library
+   attr_accessor :shelves
+
    def initialize
-      @@shelves = {}
+      @shelves = {}
       @commands = {}
       
    end
@@ -18,7 +20,7 @@ class Library
       for bookshelf in 1..bookshelves
          for row in 1..rows
                for column in 1..columns
-                  @@shelves["0#{bookshelf}0#{row}0#{column}"] = nil
+                  @shelves["0#{bookshelf}0#{row}0#{column}"] = nil
                end
          end
          response << "Shelf #{bookshelf} with #{row} rows and #{columns} columns is added"
