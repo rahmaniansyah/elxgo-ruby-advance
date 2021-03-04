@@ -11,4 +11,8 @@ gem 'rspec'
 # coverage code
 gem 'simplecov'
 
+# to debug the code
 gem 'byebug'
+
+# to hygne the code
+gem 'rubocop', require: false
