@@ -100,5 +100,8 @@ search_books_by_author|Kent Beck
 search_books_by_author|Tolkienfalse
 Book not found!
 ```
-
+When you want to stop the program
+```
+exit
+```
 
